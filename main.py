@@ -17,15 +17,15 @@ lr=0.25
 #set your starting value for x here
 start=4
 
-#workarounds for the fact that we need a starting solution whihc will alos be the old_solution by the end of the graduent decent
+#workarounds for the fact that we need a starting solution which will also be the old_solution by the end of the gradient descent
 solution=start
 old_solution=solution
 
 #we don't know how long it will take
 while True:
-    #takes the derovate (the gradient of the tangent line at the x point solution multiplied by the x point solution (the gradient of the function we are decending at that point)) and multpiles it by the learning rate
+    #takes the derivative (the gradient of the tangent line at the x point stored solution multiplied by the x point stored in solution (the gradient of the function we are descending at the x point stored in solution)) and multiples it by the learning rate
     gradient=derivative(solution)*lr
-    #subtracts the gradient from solution to give a new x value
+    #subtracts the gradient from solution to give a new x value that will be our new best guess at a solution
     solution=solution-gradient
     #for debug/coolness
     print(gradient)
