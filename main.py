@@ -28,7 +28,8 @@ while True:
     solution=solution-gradient
     #for debug/coolness
     print(gradient)
-    y=function(gradient)
+    #ca=lcuates y by putting x into the function
+    y=function(solution)
     #finds the c value for the x vale solution and the gradient gradient
     #commented out at it isn't needed for the graident descent but might be usefull to someone
     #c=calc_tangent(solution,gradient)
